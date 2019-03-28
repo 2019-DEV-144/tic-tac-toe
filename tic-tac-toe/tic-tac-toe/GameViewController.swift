@@ -25,6 +25,13 @@ class GameViewController: UIViewController {
         self.gameCollectionView.dataSource = self
         self.gameCollectionView.delegate = self
         
+        if let flowLayout =
+            self.gameCollectionView.collectionViewLayout as? UICollectionViewFlowLayout {
+            let oneThirdSquare = min(self.view.bounds.width, self.view.bounds.height) / 3
+                - Constants.interCellSpacing
+            flowLayout.estimatedItemSize = CGSize(width: oneThirdSquare, height: oneThirdSquare)
+        }
+        
         self.navigationItem.title = ""
         self.statusLabel.text = "Player 1's Turn"
     }
