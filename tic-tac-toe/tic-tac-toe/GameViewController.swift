@@ -2,7 +2,7 @@ import UIKit
 
 class GameViewController: UIViewController {
     
-    enum Constants {
+    private enum Constants {
         static let interCellSpacing: CGFloat = 8.0
     }
 
