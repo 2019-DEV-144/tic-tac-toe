@@ -16,6 +16,7 @@
 		CF7ABB5A224D141A0006AAFD /* SquareCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF7ABB58224D141A0006AAFD /* SquareCollectionViewCell.swift */; };
 		CF7ABB5B224D141A0006AAFD /* SquareCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF7ABB59224D141A0006AAFD /* SquareCollectionViewCell.xib */; };
 		CF7ABB5D224D181D0006AAFD /* Mark.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF7ABB5C224D181D0006AAFD /* Mark.swift */; };
+		CF7ABB63224D42EC0006AAFD /* GridBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF7ABB62224D42EC0006AAFD /* GridBackgroundView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		CF7ABB58224D141A0006AAFD /* SquareCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquareCollectionViewCell.swift; sourceTree = "<group>"; };
 		CF7ABB59224D141A0006AAFD /* SquareCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SquareCollectionViewCell.xib; sourceTree = "<group>"; };
 		CF7ABB5C224D181D0006AAFD /* Mark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mark.swift; sourceTree = "<group>"; };
+		CF7ABB62224D42EC0006AAFD /* GridBackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridBackgroundView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,7 @@
 				CF7ABB4B224CFD0F0006AAFD /* LaunchScreen.storyboard */,
 				CF7ABB4E224CFD0F0006AAFD /* Info.plist */,
 				CF7ABB5C224D181D0006AAFD /* Mark.swift */,
+				CF7ABB62224D42EC0006AAFD /* GridBackgroundView.swift */,
 			);
 			path = "tic-tac-toe";
 			sourceTree = "<group>";
@@ -150,6 +153,7 @@
 			files = (
 				CF7ABB5A224D141A0006AAFD /* SquareCollectionViewCell.swift in Sources */,
 				CF7ABB57224D14030006AAFD /* GameViewController.swift in Sources */,
+				CF7ABB63224D42EC0006AAFD /* GridBackgroundView.swift in Sources */,
 				CF7ABB55224D13F70006AAFD /* BeginViewController.swift in Sources */,
 				CF7ABB43224CFD0D0006AAFD /* AppDelegate.swift in Sources */,
 				CF7ABB5D224D181D0006AAFD /* Mark.swift in Sources */,

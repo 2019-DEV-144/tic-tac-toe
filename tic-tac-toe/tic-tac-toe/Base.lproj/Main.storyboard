@@ -56,39 +56,51 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" horizontalHuggingPriority="249" verticalHuggingPriority="249" verticalCompressionResistancePriority="749" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="xcr-xE-7LF">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m4a-tC-tx6" customClass="GridBackgroundView" customModule="tic_tac_toe" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="178" width="375" height="375"/>
+                                <subviews>
+                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" horizontalHuggingPriority="249" verticalHuggingPriority="249" verticalCompressionResistancePriority="749" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="xcr-xE-7LF">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="375"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="xcr-xE-7LF" secondAttribute="height" multiplier="1:1" id="6bl-Q4-6cW"/>
+                                        </constraints>
+                                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="NMD-aW-asV">
+                                            <size key="itemSize" width="50" height="50"/>
+                                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        </collectionViewFlowLayout>
+                                        <cells>
+                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="wup-G2-P29">
+                                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </view>
+                                            </collectionViewCell>
+                                        </cells>
+                                    </collectionView>
+                                </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="xcr-xE-7LF" secondAttribute="height" multiplier="1:1" id="6bl-Q4-6cW"/>
+                                    <constraint firstItem="xcr-xE-7LF" firstAttribute="top" secondItem="m4a-tC-tx6" secondAttribute="top" id="fav-gK-JK4"/>
+                                    <constraint firstAttribute="trailing" secondItem="xcr-xE-7LF" secondAttribute="trailing" id="heD-eq-S0g"/>
+                                    <constraint firstAttribute="bottom" secondItem="xcr-xE-7LF" secondAttribute="bottom" id="obu-tp-H1r"/>
+                                    <constraint firstItem="xcr-xE-7LF" firstAttribute="leading" secondItem="m4a-tC-tx6" secondAttribute="leading" id="pNe-Y3-oiD"/>
                                 </constraints>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="NMD-aW-asV">
-                                    <size key="itemSize" width="50" height="50"/>
-                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                </collectionViewFlowLayout>
-                                <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="wup-G2-P29">
-                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </view>
-                                    </collectionViewCell>
-                                </cells>
-                            </collectionView>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="HUe-PR-ceM" firstAttribute="trailing" secondItem="xcr-xE-7LF" secondAttribute="trailing" priority="999" id="8OQ-LA-iLK"/>
-                            <constraint firstItem="HUe-PR-ceM" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="xcr-xE-7LF" secondAttribute="bottom" id="Ex8-GC-0xm"/>
+                            <constraint firstItem="m4a-tC-tx6" firstAttribute="top" relation="greaterThanOrEqual" secondItem="YPF-fB-JYY" secondAttribute="bottom" constant="16" id="Ec6-IR-qzr"/>
                             <constraint firstItem="YPF-fB-JYY" firstAttribute="top" secondItem="HUe-PR-ceM" secondAttribute="top" constant="16" id="SMr-5V-2lp"/>
-                            <constraint firstItem="xcr-xE-7LF" firstAttribute="top" relation="greaterThanOrEqual" secondItem="YPF-fB-JYY" secondAttribute="bottom" constant="16" id="TEH-VW-ptQ"/>
-                            <constraint firstItem="xcr-xE-7LF" firstAttribute="centerX" secondItem="HUe-PR-ceM" secondAttribute="centerX" id="Yx4-tr-Soy"/>
-                            <constraint firstItem="xcr-xE-7LF" firstAttribute="centerY" secondItem="HUe-PR-ceM" secondAttribute="centerY" priority="999" id="hAy-6p-DkO"/>
-                            <constraint firstItem="xcr-xE-7LF" firstAttribute="leading" secondItem="HUe-PR-ceM" secondAttribute="leading" priority="999" id="tBn-QX-H52"/>
+                            <constraint firstItem="m4a-tC-tx6" firstAttribute="centerY" secondItem="HUe-PR-ceM" secondAttribute="centerY" priority="750" id="Zhz-8q-KRy"/>
+                            <constraint firstItem="m4a-tC-tx6" firstAttribute="leading" secondItem="HUe-PR-ceM" secondAttribute="leading" priority="750" id="gFk-IW-act"/>
+                            <constraint firstItem="m4a-tC-tx6" firstAttribute="centerX" secondItem="HUe-PR-ceM" secondAttribute="centerX" id="ioM-cT-DSN"/>
+                            <constraint firstItem="HUe-PR-ceM" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="m4a-tC-tx6" secondAttribute="bottom" id="lXl-g0-1d6"/>
+                            <constraint firstItem="HUe-PR-ceM" firstAttribute="trailing" secondItem="m4a-tC-tx6" secondAttribute="trailing" priority="750" id="nKH-hi-tzi"/>
                             <constraint firstItem="YPF-fB-JYY" firstAttribute="centerX" secondItem="HUe-PR-ceM" secondAttribute="centerX" id="wqj-ON-Gcu"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="HUe-PR-ceM"/>
