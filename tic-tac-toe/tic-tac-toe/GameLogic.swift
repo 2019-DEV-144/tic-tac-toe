@@ -1,16 +1,19 @@
 import Foundation
 
 class GameLogic {
-    var player1Name: String = "Player 1"
-    var player2Name: String = "Player 2"
+    var player1Name = "Player 1"
+    var player2Name = "Player 2"
     
     let rowCount = 3
     let columnCount = 3
     
     private var currentPlayer = Mark.X
     private var gameIsOver = false
+    private var dataSource: [Mark?]
     
-    private var dataSource = [Mark?](repeating: nil, count: 9)
+    init() {
+        self.dataSource = [Mark?](repeating: nil, count: rowCount * columnCount)
+    }
     
     // MARK: - Messages
     func getCurrentTurnMessage() -> String {
@@ -105,11 +108,11 @@ class GameLogic {
     
     // MARK: - Gameplay
     private func dataSourceIndex(_ row: Int, _ column: Int) -> Int {
-        return row + (3 * column)
+        return row + (column * self.columnCount)
     }
     
     func markForPosition(_ row: Int, _ column: Int) -> Mark? {
-        guard row >= 0, row < 3, column >= 0, column < 3 else {
+        guard row >= 0, row < self.rowCount, column >= 0, column < self.columnCount else {
             return nil
         }
         
@@ -117,7 +120,7 @@ class GameLogic {
     }
     
     func selectPosition(_ row: Int, _ column: Int) -> PlayResponse {
-        guard row >= 0, row < 3, column >= 0, column < 3 else {
+        guard row >= 0, row < self.rowCount, column >= 0, column < self.columnCount else {
             return .invalid
         }
         
