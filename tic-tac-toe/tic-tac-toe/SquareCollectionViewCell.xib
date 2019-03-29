@@ -18,24 +18,9 @@
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                 <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="--" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dPM-zX-7Cm">
-                        <rect key="frame" x="17" y="14.5" width="16" height="21"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
-                </subviews>
             </view>
-            <color key="backgroundColor" red="0.80000000000000004" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-            <constraints>
-                <constraint firstItem="dPM-zX-7Cm" firstAttribute="centerY" secondItem="ZTg-uK-7eu" secondAttribute="centerY" id="G8j-Sk-Daf"/>
-                <constraint firstItem="dPM-zX-7Cm" firstAttribute="centerX" secondItem="ZTg-uK-7eu" secondAttribute="centerX" id="K0H-Da-BQJ"/>
-            </constraints>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
-            <connections>
-                <outlet property="markLabel" destination="dPM-zX-7Cm" id="gJT-XG-hoe"/>
-            </connections>
         </collectionViewCell>
     </objects>
 </document>
