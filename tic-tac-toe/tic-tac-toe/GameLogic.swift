@@ -7,7 +7,7 @@ class GameLogic {
     let rowCount = 3
     let columnCount = 3
     
-    private var currentPlayer = Mark.X
+    private(set) var currentPlayer = Mark.X
     private var gameIsOver = false
     private var dataSource: [Mark?]
     
@@ -136,8 +136,10 @@ class GameLogic {
         self.dataSource[dataSourceIndex(row, column)] = self.currentPlayer
         
         if isGameWon() {
+            self.gameIsOver = true
             return .victory
         } else if isGameDrawn() {
+            self.gameIsOver = true
             return .draw
         } else {
             self.currentPlayer = self.currentPlayer.getOppositeMark()
