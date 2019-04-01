@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CF1E732B225248B7000E7E68 /* GameLogicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1E732A225248B7000E7E68 /* GameLogicTests.swift */; };
+		CF1E732C22524956000E7E68 /* GameLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF7ABB64224D54750006AAFD /* GameLogic.swift */; };
+		CF1E732D22524B61000E7E68 /* Mark.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF7ABB5C224D181D0006AAFD /* Mark.swift */; };
+		CF1E732E22524B65000E7E68 /* PlayResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF7ABB66224D572E0006AAFD /* PlayResponse.swift */; };
 		CF7ABB43224CFD0D0006AAFD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF7ABB42224CFD0D0006AAFD /* AppDelegate.swift */; };
 		CF7ABB48224CFD0D0006AAFD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF7ABB46224CFD0D0006AAFD /* Main.storyboard */; };
 		CF7ABB4A224CFD0F0006AAFD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF7ABB49224CFD0F0006AAFD /* Assets.xcassets */; };
@@ -21,7 +25,20 @@
 		CF7ABB67224D572E0006AAFD /* PlayResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF7ABB66224D572E0006AAFD /* PlayResponse.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		CF1E73252252489C000E7E68 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CF7ABB37224CFD0D0006AAFD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CF7ABB3E224CFD0D0006AAFD;
+			remoteInfo = "tic-tac-toe";
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		CF1E73202252489C000E7E68 /* tic-tac-toeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "tic-tac-toeTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CF1E73242252489C000E7E68 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CF1E732A225248B7000E7E68 /* GameLogicTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameLogicTests.swift; sourceTree = "<group>"; };
 		CF7ABB3F224CFD0D0006AAFD /* tic-tac-toe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "tic-tac-toe.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF7ABB42224CFD0D0006AAFD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CF7ABB47224CFD0D0006AAFD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -39,6 +56,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		CF1E731D2252489C000E7E68 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CF7ABB3C224CFD0D0006AAFD /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -49,10 +73,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CF1E73212252489C000E7E68 /* tic-tac-toeTests */ = {
+			isa = PBXGroup;
+			children = (
+				CF1E732A225248B7000E7E68 /* GameLogicTests.swift */,
+				CF1E73242252489C000E7E68 /* Info.plist */,
+			);
+			path = "tic-tac-toeTests";
+			sourceTree = "<group>";
+		};
 		CF7ABB36224CFD0D0006AAFD = {
 			isa = PBXGroup;
 			children = (
 				CF7ABB41224CFD0D0006AAFD /* tic-tac-toe */,
+				CF1E73212252489C000E7E68 /* tic-tac-toeTests */,
 				CF7ABB40224CFD0D0006AAFD /* Products */,
 			);
 			sourceTree = "<group>";
@@ -61,6 +95,7 @@
 			isa = PBXGroup;
 			children = (
 				CF7ABB3F224CFD0D0006AAFD /* tic-tac-toe.app */,
+				CF1E73202252489C000E7E68 /* tic-tac-toeTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -88,6 +123,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		CF1E731F2252489C000E7E68 /* tic-tac-toeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CF1E73292252489C000E7E68 /* Build configuration list for PBXNativeTarget "tic-tac-toeTests" */;
+			buildPhases = (
+				CF1E731C2252489C000E7E68 /* Sources */,
+				CF1E731D2252489C000E7E68 /* Frameworks */,
+				CF1E731E2252489C000E7E68 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CF1E73262252489C000E7E68 /* PBXTargetDependency */,
+			);
+			name = "tic-tac-toeTests";
+			productName = "tic-tac-toeTests";
+			productReference = CF1E73202252489C000E7E68 /* tic-tac-toeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		CF7ABB3E224CFD0D0006AAFD /* tic-tac-toe */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = CF7ABB51224CFD0F0006AAFD /* Build configuration list for PBXNativeTarget "tic-tac-toe" */;
@@ -115,6 +168,10 @@
 				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = "BNP Paribas Fortis";
 				TargetAttributes = {
+					CF1E731F2252489C000E7E68 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = CF7ABB3E224CFD0D0006AAFD;
+					};
 					CF7ABB3E224CFD0D0006AAFD = {
 						CreatedOnToolsVersion = 10.1;
 					};
@@ -134,11 +191,19 @@
 			projectRoot = "";
 			targets = (
 				CF7ABB3E224CFD0D0006AAFD /* tic-tac-toe */,
+				CF1E731F2252489C000E7E68 /* tic-tac-toeTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		CF1E731E2252489C000E7E68 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CF7ABB3D224CFD0D0006AAFD /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -153,6 +218,17 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		CF1E731C2252489C000E7E68 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CF1E732C22524956000E7E68 /* GameLogic.swift in Sources */,
+				CF1E732B225248B7000E7E68 /* GameLogicTests.swift in Sources */,
+				CF1E732E22524B65000E7E68 /* PlayResponse.swift in Sources */,
+				CF1E732D22524B61000E7E68 /* Mark.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CF7ABB3B224CFD0D0006AAFD /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -169,6 +245,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CF1E73262252489C000E7E68 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CF7ABB3E224CFD0D0006AAFD /* tic-tac-toe */;
+			targetProxy = CF1E73252252489C000E7E68 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		CF7ABB46224CFD0D0006AAFD /* Main.storyboard */ = {
@@ -190,6 +274,44 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		CF1E73272252489C000E7E68 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "tic-tac-toeTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.BNP-Paribas-Fortis.tic-tac-toeTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/tic-tac-toe.app/tic-tac-toe";
+			};
+			name = Debug;
+		};
+		CF1E73282252489C000E7E68 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "tic-tac-toeTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.BNP-Paribas-Fortis.tic-tac-toeTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/tic-tac-toe.app/tic-tac-toe";
+			};
+			name = Release;
+		};
 		CF7ABB4F224CFD0F0006AAFD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -345,6 +467,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		CF1E73292252489C000E7E68 /* Build configuration list for PBXNativeTarget "tic-tac-toeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CF1E73272252489C000E7E68 /* Debug */,
+				CF1E73282252489C000E7E68 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		CF7ABB3A224CFD0D0006AAFD /* Build configuration list for PBXProject "tic-tac-toe" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
