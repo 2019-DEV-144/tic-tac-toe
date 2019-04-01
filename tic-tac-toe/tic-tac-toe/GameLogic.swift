@@ -44,71 +44,55 @@ class GameLogic {
     }
     
     func isGameWon() -> Bool {
-        // Try each of the eight possible lines of three
-        var victory = false
-        
-        // Top row
-        if let topLeft = self.dataSource[0],
-            let topMiddle = self.dataSource[1],
-            let topRight = self.dataSource[2] {
-            victory = victory || (topLeft == topMiddle && topLeft == topRight)
+        // Check horizontal lines
+        for i in 0..<rowCount {
+            if (verifyLine { (index, _) in
+                index >= (i * columnCount) && index < (i + 1) * columnCount
+            }) {
+                print("Victory in row \(i)")
+                return true
+            }
+        }
+        // Check vertical lines
+        for i in 0..<columnCount {
+            if (verifyLine { (index, _) in
+                (index % columnCount) == i
+            }) {
+                print("Victory in column \(i)")
+                return true
+            }
+        }
+        // Check left-up diagonal
+        if (verifyLine { (index, _) in
+            index % (columnCount + 1) == 0
+        }) {
+            print("Victory in diagonal line (left-up)")
+            return true
         }
         
-        // Middle row
-        if let middleLeft = self.dataSource[3],
-            let centre = self.dataSource[4],
-            let middleRight = self.dataSource[5] {
-            victory = victory || (middleLeft == centre && middleLeft == middleRight)
+        // Check left-down diagonal
+        if (verifyLine { (index, _) in
+            index != 0 && index != (rowCount * columnCount) - 1 && index % (columnCount - 1) == 0
+        }) {
+            print("Victory in diagonal line (left-down)")
+            return true
         }
         
-        // Bottom row
-        if let bottomLeft = self.dataSource[6],
-            let bottomMiddle = self.dataSource[7],
-            let bottomRight = self.dataSource[8] {
-            victory = victory || (bottomLeft == bottomMiddle && bottomLeft == bottomRight)
-        }
+        return false
+    }
+    
+    private func verifyLine(_ filter: (Int, Mark?) -> Bool) -> Bool {
+        let candidateMarks = self.dataSource.enumerated().filter(filter)
         
-        // Left column
-        if let topLeft = self.dataSource[0],
-            let middleLeft = self.dataSource[3],
-            let bottomLeft = self.dataSource[6] {
-            victory = victory || (topLeft == middleLeft && topLeft == bottomLeft)
+        // Ensure all the marks are non-nil and are all the same
+        return candidateMarks.dropFirst().allSatisfy {
+            $0.element != nil && $0.element == candidateMarks.first?.element
         }
-        
-        // Middle column
-        if let topMiddle = self.dataSource[1],
-            let centre = self.dataSource[4],
-            let bottomMiddle = self.dataSource[7] {
-            victory = victory || (topMiddle == centre && topMiddle == bottomMiddle)
-        }
-        
-        // Right column
-        if let topRight = self.dataSource[2],
-            let middleRight = self.dataSource[5],
-            let bottomLeft = self.dataSource[8] {
-            victory = victory || (topRight == middleRight && topRight == bottomLeft)
-        }
-        
-        // Diagonal (left-up)
-        if let topLeft = self.dataSource[0],
-            let centre = self.dataSource[4],
-            let bottomRight = self.dataSource[8] {
-            victory = victory || (topLeft == centre && topLeft == bottomRight)
-        }
-        
-        // Diagonal (left-down)
-        if let topRight = self.dataSource[2],
-            let centre = self.dataSource[4],
-            let bottomLeft = self.dataSource[6] {
-            victory = victory || (topRight == centre && topRight == bottomLeft)
-        }
-        
-        return victory
     }
     
     // MARK: - Gameplay
     private func dataSourceIndex(_ row: Int, _ column: Int) -> Int {
-        return row + (column * self.columnCount)
+        return column + (row * self.columnCount)
     }
     
     func markForPosition(_ row: Int, _ column: Int) -> Mark? {
