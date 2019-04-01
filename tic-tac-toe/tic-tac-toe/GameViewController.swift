@@ -52,7 +52,7 @@ class GameViewController: UIViewController {
     }
     
     private func rowAndColumn(for indexPath: IndexPath) -> (row: Int, column: Int) {
-        return (indexPath.row % gameLogic.columnCount, indexPath.row / gameLogic.columnCount)
+        return (indexPath.row / gameLogic.columnCount, indexPath.row % gameLogic.columnCount)
     }
 
 }

@@ -92,7 +92,7 @@ class GameLogic {
     
     // MARK: - Gameplay
     private func dataSourceIndex(_ row: Int, _ column: Int) -> Int {
-        return row + (column * self.columnCount)
+        return column + (row * self.columnCount)
     }
     
     func markForPosition(_ row: Int, _ column: Int) -> Mark? {
